@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: hsl(216, 50%, 16%);
+
+    width: 350px;
+
+    margin-inline: 1rem;
+    padding: 1.5rem;
+    gap: 1.3rem;
+
+    border-radius: 20px;
+    box-shadow: 3px 10px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-nft {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-nft img {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: hsla(178, 100%, 50%, 0.5);
+
+    opacity: 0%;
+    transition-duration: 0.3s;
+}
+
+.overlay img {
+    position: absolute;
+
+    width: 50px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-nft:hover .overlay {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+h1 {
+    line-height: 1.1;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+h1,
+span {
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+h1:hover,
+span:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.card p {
+    color: hsl(215, 51%, 70%);
+
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+.price-and-eta {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+
+.price-and-eta img {
+    align-self: center;
+    margin-right: .5rem;
+
+}
+
+.price,
+.eta {
+    display: flex;
+}
+
+.price p {
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+}
+
+.artist {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.artist img {
+    margin-right: 1rem;
+
+    width: 32px;
+    height: 32px;
+
+
+    border-radius: 50%;
+    border: 2px solid white;
+}
